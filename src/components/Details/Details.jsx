@@ -10,9 +10,14 @@ const Details = ({ title }) => {
   const { total, chartData } = useTransactions(title);
   return (
     <Card className={title === 'Income' ? classes.income : classes.expense}>
-      <CardHeader title={title} />
+      <CardHeader
+        title={title}
+        style={{ textAlign: 'center', color: '#2727e6' }}
+      />
       <CardContent>
-        <Typography variant="h5">${total}</Typography>
+        <Typography variant="h5" title={title} style={{ textAlign: 'center' }}>
+          ${total}
+        </Typography>
         <Doughnut data={chartData} />
       </CardContent>
     </Card>
