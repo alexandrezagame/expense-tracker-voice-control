@@ -12,6 +12,7 @@ import {
 import useStyles from './styles';
 import { v4 as uuidv4 } from 'uuid';
 import formatDate from '../../../utils/formatDate';
+import { useSpeechContext } from '@speechly/react-client';
 
 import { ExpenseTrackerContext } from '../../../context/Context';
 import {
@@ -30,6 +31,7 @@ const Form = () => {
   const classes = useStyles();
   const [formData, setFormData] = useState(initialState);
   const { addTransaction } = useContext(ExpenseTrackerContext);
+  const { segment } = useSpeechContext();
 
   const createTransaction = () => {
     const transaction = {
@@ -48,7 +50,7 @@ const Form = () => {
     <Grid container spacing={2}>
       <Grid item xs="12">
         <Typography align="center" variant="subtitle2" gutterbottom>
-          ...
+          {segment ? <>{segment.words.map((w) => w.value).join(' ')}</> : null}
         </Typography>
       </Grid>
       <Grid item xs={6}>
