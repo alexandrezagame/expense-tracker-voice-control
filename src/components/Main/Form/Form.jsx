@@ -13,7 +13,6 @@ import useStyles from './styles';
 import { v4 as uuidv4 } from 'uuid';
 import formatDate from '../../../utils/formatDate';
 import { useSpeechContext } from '@speechly/react-client';
-
 import { ExpenseTrackerContext } from '../../../context/Context';
 import {
   incomeCategories,
@@ -48,9 +47,9 @@ const Form = () => {
 
   return (
     <Grid container spacing={2}>
-      <Grid item xs="12">
-        <Typography align="center" variant="subtitle2" gutterbottom>
-          {segment ? <>{segment.words.map((w) => w.value).join(' ')}</> : null}
+      <Grid item xs={12}>
+        <Typography align="center" variant="subtitle2" gutterBottom>
+          {segment && segment.words.map((w) => w.value).join(' ')}
         </Typography>
       </Grid>
       <Grid item xs={6}>

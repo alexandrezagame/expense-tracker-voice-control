@@ -4,6 +4,8 @@ import Details from './components/Details/Details';
 import {
   PushToTalkButton,
   PushToTalkButtonContainer,
+  BigTranscript,
+  BigTranscriptContainer,
   ErrorPanel,
 } from '@speechly/react-ui';
 
@@ -33,6 +35,10 @@ function App() {
           <Details title="Expense" />
         </Grid>
       </Grid>
+      <BigTranscriptContainer>
+        <BigTranscript />
+      </BigTranscriptContainer>
+
       <PushToTalkButtonContainer>
         <PushToTalkButton />
         <ErrorPanel />
