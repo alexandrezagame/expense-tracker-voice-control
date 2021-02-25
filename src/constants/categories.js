@@ -8,6 +8,12 @@ const incomeColors = [
   '#0bc77e',
   '#04e38d',
   '#00ff9d',
+  '#8CC084',
+  '#C1D7AE',
+  '#9FC490',
+  '#82A3A1',
+  '#2F4858',
+  '#0F5257',
 ];
 const expenseColors = [
   '#b50d12',
@@ -21,6 +27,10 @@ const expenseColors = [
   '#ffae8a',
   '#cc474b',
   '#f55b5f',
+  '#FF5964',
+  '#FF0000',
+  '#E01A4F',
+  '#963D5A',
 ];
 
 export const incomeCategories = [
@@ -33,6 +43,12 @@ export const incomeCategories = [
   { type: 'Salary', amount: 0, color: incomeColors[6] },
   { type: 'Savings', amount: 0, color: incomeColors[7] },
   { type: 'Rental income', amount: 0, color: incomeColors[8] },
+  { type: 'FLDOA', amount: 0, color: incomeColors[9] },
+  { type: 'GrRE', amount: 0, color: incomeColors[10] },
+  { type: 'REKD', amount: 0, color: incomeColors[11] },
+  { type: 'Tickstar', amount: 0, color: incomeColors[12] },
+  { type: 'CAW', amount: 0, color: incomeColors[13] },
+  { type: 'Other', amount: 0, color: incomeColors[14] },
 ];
 
 export const expenseCategories = [
@@ -47,6 +63,9 @@ export const expenseCategories = [
   { type: 'Phone', amount: 0, color: expenseColors[8] },
   { type: 'Pets', amount: 0, color: expenseColors[9] },
   { type: 'Other', amount: 0, color: expenseColors[10] },
+  { type: 'CAW', amount: 0, color: expenseColors[11] },
+  { type: 'REKD', amount: 0, color: expenseColors[12] },
+  { type: 'Tickstar', amount: 0, color: expenseColors[13] },
 ];
 
 export const resetCategories = () => {
